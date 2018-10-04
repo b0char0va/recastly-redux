@@ -7,6 +7,7 @@ describe('store', function() {
     var expected = Object.keys(mockStore);
     var actual = Object.keys(store);
     expect(actual).to.deep.equal(expected);
+  
   });
   it('should have a state with a .currentVideo field', function() {
     expect(store.getState().currentVideo).to.be.null;
