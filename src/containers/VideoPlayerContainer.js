@@ -5,17 +5,15 @@ import VideoPlayer from '../components/VideoPlayer.js';
 //dispatchers with your VideoPlayer component props.
 
 // var VideoPlayerContainer = () => {};
-var mapStateToProps = (state) => {
-    return {
-      video : state.currentVideo
-    };
-}; 
+var mapStateToProps = (state) => ({
+  video: state.currentVideo
+}); 
 
-var mapDispatchToProps = (dispatch) => {
-    return {
-      handleVideoListEntryTitleClick : (video) => dispatch(changeVideo(video))
-    };
-};
+var mapDispatchToProps = (dispatch) => ({
+  handleVideoListEntryTitleClick: (video) => {
+    dispatch(changeVideo(video));
+  }
+});
 
 var VideoPlayerContainer = connect(mapStateToProps, mapDispatchToProps)(VideoPlayer);
 
